@@ -4,7 +4,12 @@ import Axios from '../utils/axios'
 
 export const fetchUserData = async (id: string) => {
   return Axios.get(
-    `https://assessment-server-production.up.railway.app/api/trpc/user.getUser?id=${id}&key=fabiopineda97@gmail.com`
+    `https://assessment-server-production.up.railway.app/api/trpc/user.getUser?input=${encodeURIComponent(
+      JSON.stringify({
+        id: Number(id),
+        key: 'fabiopineda97@gmail.com'
+      })
+    )}`
   )
 }
 

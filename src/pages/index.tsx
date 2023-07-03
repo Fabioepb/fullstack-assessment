@@ -42,7 +42,7 @@ export default function Home({ existingUsers }: Props) {
         console.log(err)
       },
       staleTime: 30000,
-      retry: false
+      retry: false,
     }))
   })
 
